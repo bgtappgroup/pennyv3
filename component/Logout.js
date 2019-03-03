@@ -68,7 +68,7 @@ export default class Logout extends React.Component {
             Email : {this.state.email}
         </Text>
         <View>
-        <Button color='blue'title='logout' onPress={() => this.signOutUser()} />
+        <Button color='pink'title='logout' onPress={() => this.signOutUser()} />
             </View>
         
       </View>
