@@ -3,15 +3,15 @@ import { View, Text, ActivityIndicator, StyleSheet } from 'react-native'
 
 export default class Loading extends Component {
   componentDidMount() {
-    const firebase = require("firebase");   
+    const firebase = require("firebase");    // initialize firebase
     
-    firebase.auth().onAuthStateChanged(user => {
+    firebase.auth().onAuthStateChanged(user => {  // This is a built in function from firebase for authentication purpose
      
-      if (user) {
-        this.props.navigation.navigate('Main')
+      if (user) {                          // if user true means already logged in 
+        this.props.navigation.navigate('Main')   //switch to main Screen
       }
-      else {
-        this.props.navigation.navigate('Login')
+      else {   // if user is false means not logged in the app swith to Login screen
+        this.props.navigation.navigate('Login')    // this line navigate to 'Login' screen
       }
     })
   }
