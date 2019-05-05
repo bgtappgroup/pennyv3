@@ -1,23 +1,27 @@
+//app.js is main file where you initialise all the files in compinents 
+
+
 import React from 'react'
 import { StyleSheet, Text, TextInput, View, TouchableOpacity } from 'react-native'
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 //import firebase from 'firebase'
 
 export default class Login extends React.Component {
-  state = { email: '', password: '', errorMessage: null } //when you set variable in file. 
+  state = { email: '', password: '', errorMessage: null } //setting states 
 
 //to set sta]te of variable 
 //state: when value is dynamic
 //props: when value is static 
 
   handleLogin = () => {
+    //three: let, var, const like 'public and private in java'
     const firebase = require("firebase");
     const { email, password } = this.state
     firebase
-      .auth()
-      .signInWithEmailAndPassword(email, password)
-      .then(() => this.props.navigation.navigate('Main'))
-      .catch(error => this.setState({ errorMessage: error.message }))
+      .auth() //built in firebase function. enable email and password. 
+      .signInWithEmailAndPassword(email, password) //inisde authentication section in firebase
+      .then(() => this.props.navigation.navigate('Main')) //if correct infor then move to main screen 
+      .catch(error => this.setState({ errorMessage: error.message })) //
   }
 
   render() {
