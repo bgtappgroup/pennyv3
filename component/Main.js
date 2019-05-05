@@ -202,3 +202,8 @@ connect:{
 }
 
 });
+//add new fields 
+
+//new technoogy. cross platform.
+//Free of cost and as initial tester for 100 defices and also realtime database
+//hrid view of react native for dashboard. 
