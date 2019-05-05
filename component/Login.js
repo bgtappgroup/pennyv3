@@ -35,7 +35,7 @@ export default class Login extends React.Component {
           autoCapitalize="none"
           placeholder="Email"
           onChangeText={email => this.setState({ email })}
-          value={this.state.email}
+          value={this.state.email} //when email is typed it sets this as the new state
         />
         <TextInput
           secureTextEntry
@@ -43,7 +43,7 @@ export default class Login extends React.Component {
           autoCapitalize="none"
           placeholder="Password"
           onChangeText={password => this.setState({ password })}
-          value={this.state.password}
+          value={this.state.password} //when password is typed it sets this as the new state
         />
         <TouchableOpacity  onPress={this.handleLogin} >
         <Text style={{fontSize: 40, color:'black',fontWeight: '700',}}>Login</Text>
