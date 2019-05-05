@@ -4,7 +4,11 @@ import { createStackNavigator, createAppContainer } from 'react-navigation';
 //import firebase from 'firebase'
 
 export default class Login extends React.Component {
-  state = { email: '', password: '', errorMessage: null }
+  state = { email: '', password: '', errorMessage: null } //when you set variable in file. 
+
+//to set sta]te of variable 
+//state: when value is dynamic
+//props: when value is static 
 
   handleLogin = () => {
     const firebase = require("firebase");
